@@ -22,13 +22,19 @@ namespace ApiExercCloudComputing.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public string Post([FromBody]string value)
         {
-            //conecta na fila f1
-            StorageHelper.StorageHelper.ConnectToStorage("f1");
+            if (!string.IsNullOrEmpty(value))
+            {
+                //conecta na fila f1
+                StorageHelper.StorageHelper.ConnectToStorage("f1");
 
-            //manda o que foi recebido via post para a fila
-            StorageHelper.StorageHelper.SendMessageToQueue(value);
+                //manda o que foi recebido via post para a fila
+                StorageHelper.StorageHelper.SendMessageToQueue(value);
+
+                return "Mensagem enviada!"; 
+            }else
+                return "Erro ao enviar a mensagem!";
         }
 
         // PUT api/values/5

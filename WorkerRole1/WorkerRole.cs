@@ -74,7 +74,7 @@ namespace WorkerRole1
                 //adiciona a mensagem
                 SendMessageToQueue(message);
 
-                await Task.Delay(1000);
+                await Task.Delay(2000);
             }
         }
 

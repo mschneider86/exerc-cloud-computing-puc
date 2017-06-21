@@ -70,7 +70,7 @@ namespace WorkerRole2
                 //recebe a mensagem e a remove
                 GetMessageFromQueue();
 
-                await Task.Delay(1000);
+                await Task.Delay(2000);
             }
         }
 
