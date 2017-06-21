@@ -65,12 +65,12 @@ namespace WorkerRole1
 
 
                 //Conecta na fila 1
-                ConnectToStorage("f1");
+                ConnectToStorage("fila1");
                 //recupera a mensagem
                 string message = GetMessageFromQueue();
 
                 //conecta na fila 2
-                ConnectToStorage("f2");
+                ConnectToStorage("fila2");
                 //adiciona a mensagem
                 SendMessageToQueue(message);
 

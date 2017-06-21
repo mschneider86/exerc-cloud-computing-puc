@@ -65,7 +65,7 @@ namespace WorkerRole2
 
 
                 //conecta na fila f2
-                ConnectToStorage("f2");
+                ConnectToStorage("fila2");
 
                 //recebe a mensagem e a remove
                 GetMessageFromQueue();

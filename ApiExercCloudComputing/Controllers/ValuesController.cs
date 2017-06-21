@@ -27,7 +27,7 @@ namespace ApiExercCloudComputing.Controllers
             if (!string.IsNullOrEmpty(value))
             {
                 //conecta na fila f1
-                StorageHelper.StorageHelper.ConnectToStorage("f1");
+                StorageHelper.StorageHelper.ConnectToStorage("fila1");
 
                 //manda o que foi recebido via post para a fila
                 StorageHelper.StorageHelper.SendMessageToQueue(value);
